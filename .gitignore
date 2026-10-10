@@ -1,0 +1,15 @@
+# LaTeX intermediate files and generated .tex (build.py compiles here)
+build/
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Output of the sample application (_example)
+dist/applications/_*/
+
+# Local, private agent notes
+CLAUDE.local.md
+.claude/settings.local.json
