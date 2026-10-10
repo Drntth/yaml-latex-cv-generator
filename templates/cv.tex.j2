@@ -1,0 +1,83 @@
+\documentclass[11pt]{developercv}
+\hypersetup{pdfauthor={\VAR{profile.name}}, pdftitle={\VAR{profile.name} – \VAR{labels.doc_cv}}}
+
+\begin{document}
+
+\BLOCK{include "header.tex.j2"}
+
+\BLOCK{for section in sections}
+\BLOCK{if section == "summary" and summary}
+\cvsect{\VAR{labels.summary}}
+\VAR{summary}
+
+\BLOCK{elif section == "experience" and experience}
+\cvsect{\VAR{labels.experience}}
+\BLOCK{for item in experience}
+\cventry{\VAR{item.role}}{\VAR{item.period}}{\VAR{item.org}}{%
+\BLOCK{if item.bullets}
+\begin{itemize}
+\BLOCK{for b in item.bullets}
+    \item \VAR{b}
+\BLOCK{endfor}
+\end{itemize}
+\BLOCK{endif}
+\BLOCK{if item.tech}
+{\small\textbf{\VAR{labels.tech}:} \VAR{item.tech|join(", ")}}
+\BLOCK{endif}
+}
+\BLOCK{endfor}
+
+\BLOCK{elif section == "projects" and projects}
+\cvsect{\VAR{labels.projects}}
+\BLOCK{for item in projects}
+\cventry{\VAR{item.title}}{\VAR{item.period}}{\BLOCK{for link in item.links}\href{\VAR{link.url|url}}{\VAR{link.label}}\BLOCK{if not loop.last}\sep{}\BLOCK{endif}\BLOCK{endfor}}{%
+\begin{itemize}
+\BLOCK{for b in item.bullets}
+    \item \VAR{b}
+\BLOCK{endfor}
+\end{itemize}
+\BLOCK{if item.tech}
+{\small\textbf{\VAR{labels.tech}:} \VAR{item.tech|join(", ")}}
+\BLOCK{endif}
+}
+\BLOCK{endfor}
+
+\BLOCK{elif section == "education" and education}
+\cvsect{\VAR{labels.education}}
+\BLOCK{for item in education}
+\cventry{\VAR{item.degree}}{\VAR{item.period}}{\VAR{item.org}}{\BLOCK{if item.note}{\small \VAR{item.note}}\BLOCK{endif}}
+\BLOCK{endfor}
+
+\BLOCK{elif section == "activities" and activities}
+\cvsect{\VAR{labels.activities}}
+\BLOCK{for item in activities}
+\cventry{\VAR{item.role}}{\VAR{item.period}}{\VAR{item.org}}{%
+\BLOCK{if item.bullets}
+\begin{itemize}
+\BLOCK{for b in item.bullets}
+    \item \VAR{b}
+\BLOCK{endfor}
+\end{itemize}
+\BLOCK{endif}
+}
+\BLOCK{endfor}
+
+\BLOCK{elif section == "skills" and skills}
+\cvsect{\VAR{labels.skills}}
+\BLOCK{for group in skills}
+\cvline{\VAR{group.label}}{\VAR{group["items"]|join(", ")}}
+\BLOCK{endfor}
+
+\BLOCK{elif section == "certificates" and certificates}
+\cvsect{\VAR{labels.certificates}}
+\BLOCK{for group in certificates|groupby("issuer")}
+\cvline{\VAR{group.grouper}}{\VAR{group.list|join("; ", attribute="title")} (\VAR{group.list|map(attribute="date")|unique|join(", ")})}
+\BLOCK{endfor}
+
+\BLOCK{elif section == "other" and other}
+\cvsect{\VAR{labels.other}}
+\BLOCK{for line in other}\textbf{\VAR{line.label}:} \VAR{line.text}\BLOCK{if not loop.last}\sep{}\BLOCK{endif}\BLOCK{endfor}\par
+\BLOCK{endif}
+\BLOCK{endfor}
+
+\end{document}

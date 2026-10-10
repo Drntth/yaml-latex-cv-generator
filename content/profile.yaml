@@ -1,0 +1,15 @@
+# Language-independent personal and contact data (fictional sample data).
+# The date of birth is intentionally left out.
+name: Jane Doe
+phone: +00 00 000 0000
+email: jane.doe@example.com
+location: Example City
+# Image files from assets/. photo_file defaults to avatar.jpg;
+# signature_file is optional, without it the letter has no signature image.
+photo_file: avatar.jpg
+# signature_file: signature.png
+links:
+  - label: linkedin.com/in/jane-doe-example
+    url: https://www.linkedin.com/in/jane-doe-example
+  - label: janedoe.example.com
+    url: https://janedoe.example.com/

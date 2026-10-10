@@ -1,0 +1,33 @@
+# Application-specific override (sample).
+# File name: <YYYY-MM-DD>-<company>-<position>.yaml   Build: make app APP=applications/<file>.yaml
+# Output: dist/applications/<file name>/
+#
+# Only the listed keys override the base; facts (employers, dates) cannot be changed here.
+extends: developer          # developer | general
+langs: [en]                 # one or more languages: [en], [hu], [en, hu]
+# photo: false              # photo on/off (default: the variant setting)
+
+# Title and summary tailored to the position (with the keywords of the job ad, if true).
+title: {en: Android Developer, hu: Android fejlesztő}
+summary:
+  en: >-
+    Android developer with seven years of experience in Kotlin, Jetpack Compose and offline-first apps,
+    including release automation and accessibility testing. Computer Engineering BSc.
+  hu: >-
+    Android fejlesztő hét év tapasztalattal Kotlin, Jetpack Compose és offline-first alkalmazások terén,
+    kiadásautomatizálással és akadálymentességi teszteléssel. Mérnökinformatikus BSc.
+
+# Section order, hidden items (<section>:<id>), skill group order (id). All optional.
+# sections: [summary, experience, skills, projects, education, certificates, other]
+hide: [certificates:cert-a11y]
+skills_order: [languages, frameworks, tools, backend]
+
+# Cover letter: any field can be overridden; body replaces the fallback paragraphs.
+letter:
+  recipient: [Example Company Ltd., HR Department]
+  subject: {en: Android Developer application, hu: Jelentkezés Android fejlesztő pozícióra}
+  # date: 2026-01-15          # default: the date in content/cover_letter.yaml, else the build date
+  # salutation: {en: "Dear Ms Example,", hu: "Tisztelt Példa Anna!"}
+  # body:
+  #   - en: ...
+  #     hu: ...

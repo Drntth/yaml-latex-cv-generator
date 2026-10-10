@@ -1,0 +1,137 @@
+# Every CV item in one place, in both languages (fictional sample data).
+#
+# Rules:
+# - {en: ..., hu: ...}         language-dependent text; both keys are required.
+# - {"@developer": ..., "@general": ...}
+#                              variant-dependent value; empty if the variant is missing.
+# - tags: [developer, general] the item appears only in these variants.
+# - id:                        reference from variant and application files (hide, skills_order).
+# - **text**                   bold.
+# - Quote any value that contains a comma.
+
+experience:
+  - id: example-apps
+    tags: [developer, general]
+    period: {en: 2021 – present, hu: 2021 – jelenleg}
+    role: {en: Mobile Developer, hu: Mobilfejlesztő}
+    org: {en: Example Apps Ltd., hu: Example Apps Kft.}
+    bullets:
+      "@developer":
+        - en: Development of a **Kotlin** and **Swift** retail app with offline mode and push notifications.
+          hu: '**Kotlin** és **Swift** alapú kiskereskedelmi alkalmazás fejlesztése offline móddal és push értesítésekkel.'
+        - en: Migration of the Android UI from XML layouts to Jetpack Compose.
+          hu: Az Android felület átállítása XML layoutokról Jetpack Compose-ra.
+        - en: Release automation for both app stores with Fastlane and GitHub Actions.
+          hu: Kiadásautomatizálás mindkét alkalmazásboltba Fastlane-nel és GitHub Actions-szel.
+      "@general":
+        - en: App development in a product team, release planning and user feedback handling.
+          hu: Alkalmazásfejlesztés termékcsapatban, kiadástervezés és felhasználói visszajelzések kezelése.
+    tech:
+      "@developer": [Kotlin, Swift, Jetpack Compose, SwiftUI, Firebase]
+  - id: sample-studio
+    tags: [developer, general]
+    period: 2018 – 2021
+    role: {en: Junior Android Developer, hu: Junior Android fejlesztő}
+    org: {en: Sample Studio Ltd., hu: Sample Studio Kft.}
+    bullets:
+      "@developer":
+        - en: Feature development and bug fixing for client apps written in Java and Kotlin.
+          hu: Funkciófejlesztés és hibajavítás Java és Kotlin nyelvű ügyfélalkalmazásokban.
+        - en: UI tests with Espresso for the most used user flows.
+          hu: Felületi tesztek Espressóval a leggyakoribb felhasználói folyamatokra.
+      "@general":
+        - en: Software development for client projects, estimates and status reports.
+          hu: Szoftverfejlesztés ügyfélprojektekben, becslések és státuszjelentések készítése.
+  - id: library
+    tags: [general]
+    period: 2015 – 2018
+    role: {en: Library Assistant (part-time), hu: Könyvtári asszisztens (részmunkaidő)}
+    org: {en: Example City Library, hu: Example Városi Könyvtár}
+    bullets:
+      - en: Visitor service, catalogue maintenance and event organization.
+        hu: Olvasószolgálat, katalógusgondozás és rendezvényszervezés.
+
+projects:
+  - id: trail-app
+    tags: [developer]
+    period: 2024
+    title: {en: Offline hiking trail app, hu: Offline túraútvonal-alkalmazás}
+    links:
+      - label: GitHub
+        url: https://github.com/example/trail-app
+    bullets:
+      - en: Open-source Android app that stores maps and trails locally and records tracks without network.
+        hu: Nyílt forrású Android alkalmazás, amely helyben tárolja a térképeket és útvonalakat, és hálózat nélkül rögzít.
+      - en: Room database with background sync when the device is back online.
+        hu: Room adatbázis háttérszinkronizálással, amikor az eszköz újra online.
+    tech: [Kotlin, Room, WorkManager, MapLibre]
+
+education:
+  - id: bsc
+    tags: [developer, general]
+    period: 2014 – 2018
+    degree: {en: Computer Engineering BSc, hu: Mérnökinformatikus BSc}
+    org: {en: "Example University of Technology, Example City", hu: "Example Műszaki Egyetem, Example City"}
+    note:
+      "@general": {en: "Thesis: Energy-efficient location tracking on mobile devices.", hu: "Szakdolgozat: Energiatakarékos helymeghatározás mobileszközökön."}
+
+activities:
+  - id: mentor
+    tags: [general]
+    period: 2019 – present
+    role: {en: "Volunteer mentor, Example Code Club for Kids", hu: "Önkéntes mentor, Example Gyerek Kódklub"}
+    org: {en: Example Foundation, hu: Example Alapítvány}
+    bullets:
+      - en: Monthly beginner workshops on building simple games and apps.
+        hu: Havi kezdő workshopok egyszerű játékok és alkalmazások készítéséről.
+
+skills:
+  - id: languages
+    tags: [developer]
+    label: {en: Languages, hu: Nyelvek}
+    items: [Kotlin, Swift, Java]
+  - id: frameworks
+    tags: [developer]
+    label: {en: Frameworks, hu: Keretrendszerek}
+    items: [Jetpack Compose, SwiftUI, Room, Coroutines]
+  - id: backend
+    tags: [developer]
+    label: {en: Backend services, hu: Backend szolgáltatások}
+    items: [Firebase, GraphQL clients, REST]
+  - id: tools
+    tags: [developer]
+    label: {en: Tools, hu: Eszközök}
+    items: [Android Studio, Xcode, Gradle, Fastlane, Git]
+  - id: digital
+    tags: [general]
+    label: {en: Digital tools, hu: Digitális eszközök}
+    items: [Office, spreadsheets, project management tools]
+  - id: soft
+    tags: [general]
+    label: {en: Soft skills, hu: Személyes készségek}
+    items:
+      - {en: mentoring, hu: mentorálás}
+      - {en: presentation, hu: prezentáció}
+      - {en: event organization, hu: rendezvényszervezés}
+
+certificates:
+  - id: cert-mobile
+    tags: [developer, general]
+    date: 2022
+    title: Example Certified Mobile Developer
+    issuer: Example Institute
+  - id: cert-a11y
+    tags: [developer]
+    date: 2023
+    title: Example Accessibility Basics
+    issuer: Example Institute
+
+other:
+  - id: languages
+    tags: [developer, general]
+    label: {en: Languages, hu: Nyelvek}
+    text: {en: "English (C1), Spanish (B2)", hu: "angol (C1), spanyol (B2)"}
+  - id: licence
+    tags: [general]
+    label: {en: Driving licence, hu: Jogosítvány}
+    text: {en: Category B, hu: B kategória}

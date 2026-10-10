@@ -1,0 +1,14 @@
+# General CV: non-development roles (IT-related, office, customer-facing).
+output: cv_general                  # + _en / _hu
+letter_output: cover_letter_general
+photo: true
+title: {en: Computer Engineer (BSc), hu: Mérnökinformatikus (BSc)}
+summary:
+  en: >-
+    Computer engineer with experience in product teams, client projects and public library service. Organized,
+    patient and clear in communication, with years of volunteer mentoring.
+  hu: >-
+    Mérnökinformatikus, termékcsapatban, ügyfélprojektekben és könyvtári szolgálatban szerzett tapasztalattal.
+    Szervezett, türelmes, világosan kommunikál; évek óta önkéntes mentor.
+sections: [summary, education, experience, activities, skills, certificates, other]
+hide: []

@@ -1,0 +1,103 @@
+# Shared cover letter fields and a fallback body per variant (fictional sample data).
+# An application file may override any field (letter: ...); body replaces the paragraphs.
+place: Example City
+# Fixed date so the committed sample output is reproducible; without it the build date is used.
+date: 2026-01-15
+salutation: {en: "Dear Hiring Manager,", hu: Tisztelt Hölgyem/Uram!}
+signoff: {en: "Sincerely,", hu: "Tisztelettel:"}
+body:
+  "@developer":
+    - en: >-
+        I am writing to apply for the mobile developer position in your team. I am a computer engineer with
+        seven years of experience in native Android and iOS development, and I currently lead the mobile work on
+        a retail app at Example Apps Ltd. that is used daily in stores and at home.
+      hu: >-
+        Ezúton jelentkezem az Önök csapatában meghirdetett mobilfejlesztői pozícióra. Mérnökinformatikus
+        vagyok, hét év tapasztalattal natív Android és iOS fejlesztésben; jelenleg az Example Apps Kft.-nél egy
+        kiskereskedelmi alkalmazás mobilfejlesztését vezetem, amelyet naponta használnak üzletekben és otthon.
+    - en: >-
+        In my current role I build features in Kotlin and Swift, maintain the offline mode and push
+        notifications, and migrated a large part of the Android interface from XML layouts to Jetpack Compose
+        without interrupting regular releases. I also set up release automation for both app stores with
+        Fastlane and GitHub Actions, which turned a half-day manual process into a routine step. I care about
+        accessibility and test the most important flows with screen readers before every release.
+      hu: >-
+        Jelenlegi munkakörömben Kotlin és Swift nyelven fejlesztek funkciókat, gondozom az offline módot és a
+        push értesítéseket, és az Android felület nagy részét a rendszeres kiadások megszakítása nélkül
+        állítottam át XML layoutokról Jetpack Compose-ra. Fastlane-nel és GitHub Actions-szel kiadásautomatizálást
+        építettem mindkét alkalmazásboltba, így egy félnapos kézi folyamatból rutinlépés lett. Fontos számomra az
+        akadálymentesség: minden kiadás előtt képernyőolvasóval is tesztelem a legfontosabb folyamatokat.
+    - en: >-
+        Before that, I spent three years at Sample Studio Ltd. working on client apps in Java and Kotlin, where
+        I learned to estimate work honestly, to communicate with clients and to write UI tests for the flows
+        that matter most. In my free time I maintain an open-source offline hiking app and mentor children at a
+        local code club, which keeps me practising how to explain technical ideas simply.
+      hu: >-
+        Korábban három évig a Sample Studio Kft.-nél dolgoztam Java és Kotlin nyelvű ügyfélalkalmazásokon, ahol
+        megtanultam reálisan becsülni, ügyfelekkel kommunikálni és felületi teszteket írni a legfontosabb
+        folyamatokra. Szabadidőmben egy nyílt forrású offline túraalkalmazást tartok karban, és gyerekeket
+        mentorálok egy helyi kódklubban, ami segít egyszerűen elmagyarázni a technikai gondolatokat.
+    - en: >-
+        I enjoy working in teams where code review is a conversation rather than a gate. I try to keep pull
+        requests small, explain the reasoning behind a change and leave the code a little clearer than I found
+        it. When a release goes wrong, I prefer to look for the missing check in the process instead of a person
+        to blame, and to add that check so the same problem does not return.
+      hu: >-
+        Szeretek olyan csapatban dolgozni, ahol a code review beszélgetés, nem akadály. Igyekszem kis pull
+        requesteket készíteni, megindokolni a változtatásokat, és kicsit átláthatóbban hagyni a kódot, mint
+        ahogy találtam. Ha egy kiadás rosszul sül el, a folyamatból hiányzó ellenőrzést keresem, nem a hibást,
+        és beépítem azt, hogy ugyanaz a probléma ne forduljon elő újra.
+    - en: >-
+        I would be glad to bring this experience to your products and to learn from your team. Thank you for
+        considering my application; I look forward to hearing from you.
+      hu: >-
+        Örömmel hoznám ezt a tapasztalatot az Önök termékeihez, és tanulnék a csapattól. Köszönöm, hogy
+        megfontolják jelentkezésemet; várom szíves válaszukat.
+  "@general":
+    - en: >-
+        I am writing to apply for the position advertised by your organization. I hold a Computer Engineering
+        BSc and have worked in product teams, client projects and public library service, which has given me a
+        mix of technical understanding, organization and everyday contact with people.
+      hu: >-
+        Ezúton jelentkezem az Önök által meghirdetett pozícióra. Mérnökinformatikus BSc végzettséggel
+        rendelkezem, és dolgoztam termékcsapatban, ügyfélprojektekben és könyvtári szolgálatban, így a technikai
+        ismeretek mellett a szervezésben és a napi ügyfélkapcsolatban is jártas vagyok.
+    - en: >-
+        At Example Apps Ltd. I take part in release planning, collect and sort user feedback and make sure that
+        decisions are documented for the whole team. In client projects at Sample Studio Ltd. I prepared
+        estimates and regular status reports, so I am used to clear written communication and deadlines. As a
+        library assistant during my studies I served visitors, maintained the catalogue and organized events
+        for families and students.
+      hu: >-
+        Az Example Apps Kft.-nél részt veszek a kiadások tervezésében, összegyűjtöm és rendszerezem a
+        felhasználói visszajelzéseket, és gondoskodom róla, hogy a döntések az egész csapat számára dokumentálva
+        legyenek. A Sample Studio Kft. ügyfélprojektjeiben becsléseket és rendszeres státuszjelentéseket
+        készítettem, így megszoktam a világos írásbeli kommunikációt és a határidőket. Egyetem alatt könyvtári
+        asszisztensként olvasókat szolgáltam ki, gondoztam a katalógust, és családi és diákrendezvényeket
+        szerveztem.
+    - en: >-
+        For several years I have also been a volunteer mentor at a code club for children, where I plan monthly
+        workshops and present in front of groups. I am patient, reliable and organized, and I enjoy making
+        processes clearer for the people who rely on them.
+      hu: >-
+        Évek óta önkéntes mentor vagyok egy gyerekeknek szóló kódklubban, ahol havi workshopokat tervezek, és
+        csoportok előtt adok elő. Türelmes, megbízható és szervezett vagyok, és szívesen teszem átláthatóbbá a
+        folyamatokat azok számára, akik használják őket.
+    - en: >-
+        What attracts me to your organization is the chance to work closely with people and to see the direct
+        effect of well-organized work. I learn new systems quickly, I am comfortable with spreadsheets and
+        documentation, and I like to turn scattered information into simple checklists and guides that others
+        can follow without asking. I am also used to switching between technical and non-technical colleagues
+        and finding a common language.
+      hu: >-
+        Az Önök szervezetében az vonz, hogy szorosan együtt dolgozhatnék emberekkel, és közvetlenül látnám a
+        jól szervezett munka hatását. Gyorsan tanulok új rendszereket, magabiztosan kezelem a táblázatokat és a
+        dokumentációt, és szívesen alakítom a szétszórt információt egyszerű ellenőrzőlistákká és útmutatókká,
+        amelyeket mások kérdezés nélkül követhetnek. Megszoktam, hogy technikai és nem technikai kollégák között
+        közös nyelvet találjak.
+    - en: >-
+        I would be glad to contribute this experience to your team. Thank you for your time and consideration;
+        I look forward to hearing from you.
+      hu: >-
+        Örömmel kamatoztatnám ezt a tapasztalatot az Önök csapatában. Köszönöm, hogy időt szánnak
+        jelentkezésemre; várom szíves válaszukat.

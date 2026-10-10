@@ -1,0 +1,14 @@
+# Developer CV: software development and IT roles.
+output: cv_developer                # + _en / _hu
+letter_output: cover_letter_developer
+photo: true
+title: {en: Mobile Developer – Android & iOS, hu: Mobilfejlesztő – Android és iOS}
+summary:
+  en: >-
+    Mobile developer with seven years of experience in native Android and iOS apps. Focused on offline-first
+    design, accessible interfaces and automated releases.
+  hu: >-
+    Mobilfejlesztő hét év tapasztalattal natív Android és iOS alkalmazások terén. Fókuszban az offline-first
+    tervezés, az akadálymentes felületek és az automatizált kiadás.
+sections: [summary, experience, projects, skills, education, certificates, other]
+hide: []

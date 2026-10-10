@@ -1,0 +1,47 @@
+\documentclass[11pt]{developercv}
+\hypersetup{pdfauthor={\VAR{profile.name}}, pdftitle={\VAR{profile.name} – \VAR{labels.doc_letter}}}
+
+\begin{document}
+
+\BLOCK{include "header.tex.j2"}
+
+\vspace{8mm}
+
+\BLOCK{if letter.recipient}
+\BLOCK{for line in letter.recipient}
+\VAR{line}\par
+\BLOCK{endfor}
+\vspace{6mm}
+\BLOCK{endif}
+
+\BLOCK{if letter.subject}
+\textbf{\VAR{labels.subject}: \VAR{letter.subject}}\par
+\vspace{6mm}
+\BLOCK{endif}
+
+\textbf{\VAR{letter.salutation}}\par
+\vspace{4mm}
+
+\setlength{\parskip}{3.5mm}
+\BLOCK{for p in letter.body}
+\VAR{p}
+
+\BLOCK{endfor}
+\setlength{\parskip}{0mm}
+
+\vspace{20mm}
+
+\begin{minipage}[t]{0.5\textwidth}
+    \raggedright
+    \VAR{letter.place_date}
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+    \raggedleft
+    \textbf{\VAR{letter.signoff}}\\[2mm]
+    \textit{\VAR{profile.name}}
+\BLOCK{if profile.signature_file}
+    \\[2mm]\includegraphics[height=1.25cm]{\VAR{profile.signature_file|url}}
+\BLOCK{endif}
+\end{minipage}
+
+\end{document}

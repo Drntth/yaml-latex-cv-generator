@@ -1,0 +1,16 @@
+# Section titles and fixed labels per language.
+summary: {en: Profile, hu: Szakmai összefoglaló}
+experience: {en: Experience, hu: Szakmai tapasztalat}
+projects: {en: Projects, hu: Projektek}
+education: {en: Education, hu: Tanulmányok}
+activities: {en: Activities, hu: Szerepvállalás}
+skills: {en: Skills, hu: Készségek}
+certificates: {en: Certificates, hu: Tanúsítványok}
+other: {en: Languages and other, hu: Nyelvek és egyéb}
+tech: {en: Technologies, hu: Technológiák}
+subject: {en: Re, hu: Tárgy}
+months:
+  en: [January, February, March, April, May, June, July, August, September, October, November, December]
+  hu: [január, február, március, április, május, június, július, augusztus, szeptember, október, november, december]
+doc_cv: {en: CV, hu: Önéletrajz}
+doc_letter: {en: Cover letter, hu: Motivációs levél}

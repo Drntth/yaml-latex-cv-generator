@@ -1,0 +1,16 @@
+\#{ Shared header for the CV and the cover letter. }
+\begin{minipage}[c]{\BLOCK{if photo}0.80\BLOCK{else}1.0\BLOCK{endif}\textwidth}
+    \cvname{\VAR{profile.name}}\par\vspace{1mm}
+\BLOCK{if title}
+    \cvtitle{\VAR{title}}\par\vspace{1.5mm}
+\BLOCK{endif}
+    \cvcontact{\VAR{profile.phone}\sep{}\href{mailto:\VAR{profile.email|url}}{\VAR{profile.email}}\sep{}\VAR{profile.location}}\par
+    \cvcontact{\BLOCK{for link in profile.links}\href{\VAR{link.url|url}}{\VAR{link.label}}\BLOCK{if not loop.last}\sep{}\BLOCK{endif}\BLOCK{endfor}}
+\end{minipage}%
+\BLOCK{if photo}
+\hfill
+\begin{minipage}[c]{0.18\textwidth}
+    \raggedleft\cvphoto{\VAR{profile.photo_file|default("avatar.jpg")|url}}
+\end{minipage}
+\BLOCK{endif}
+\par\vspace{1mm}
