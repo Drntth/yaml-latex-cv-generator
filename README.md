@@ -30,7 +30,7 @@ The repository ships with fictional sample data (Jane Doe) and the PDFs generate
 
 ## Requirements
 
-- Python 3.10+
+- Python 3.14+
 - TeX Live with `pdflatex`, `latexmk` and the packages `extsizes`, `sourcesanspro`, `microtype`, `cmap`, `tikz`, `enumitem`
 - `pdfinfo` and `pdftoppm` (poppler-utils)
 

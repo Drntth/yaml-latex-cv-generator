@@ -21,7 +21,7 @@ app:
 	$(PY) build.py app $(APP) $(PHOTO_ARG)
 
 venv:
-	python3 -m venv .venv && .venv/bin/pip install -r requirements.txt -r requirements-dev.txt
+	python3.14 -m venv .venv && .venv/bin/pip install -r requirements.txt -r requirements-dev.txt
 
 lint:
 	.venv/bin/ruff check build.py tests && .venv/bin/ruff format --check build.py tests

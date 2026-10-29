@@ -30,7 +30,7 @@ A repó kitalált mintaadatokkal (Jane Doe) és az ezekből generált PDF-ekkel 
 
 ## Követelmények
 
-- Python 3.10+
+- Python 3.14+
 - TeX Live: `pdflatex`, `latexmk`, valamint a `extsizes`, `sourcesanspro`, `microtype`, `cmap`, `tikz`, `enumitem` csomagok
 - `pdfinfo` és `pdftoppm` (poppler-utils)
 
