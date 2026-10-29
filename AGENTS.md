@@ -8,7 +8,7 @@ Bilingual (en, hu) CV and cover letter generator. Content in YAML, design in one
 
 ## Stack
 
-Python 3.10+, Jinja2, PyYAML; TeX Live (`pdflatex`, `latexmk`); poppler-utils (`pdfinfo`, `pdftoppm`); pytest, ruff.
+Python 3.14+, Jinja2, PyYAML; TeX Live (`pdflatex`, `latexmk`); poppler-utils (`pdfinfo`, `pdftoppm`); pytest, ruff.
 
 ## Commands
 
@@ -44,3 +44,10 @@ Run `make all`, `make test` and `make lint` after every change; check the page a
 - After a design or sample content change, run `make preview` and commit the PNGs.
 - ATS-friendly: single column, no icon fonts, ligatures disabled, contact details as plain text.
 - The LaTeX class is MIT-licensed third-party work; keep its notice in `LICENSE` and in the class header.
+
+## Release and docs
+
+- `tools/check.sh` runs pytest, `ruff check` and `ruff format --check`; CI (`.github/workflows/ci.yml`) runs the same script on Python 3.14 on every push and pull request; keep it green. The PDF build is not in CI. Run `./setup-hooks.sh` once after cloning: it enables the pre-commit secret guard (`tools/hooks/`).
+- Docs change in the same commit as the code: `README.md` and `README.hu.md` (user-facing), `CHANGELOG.md` `## [Unreleased]`.
+- Version lives only in `pyproject.toml`. A finished milestone: bump it (SemVer), move Unreleased to `## [x.y.z] - YYYY-MM-DD`, commit, then `git tag -a vX.Y.Z -m "<milestone>"` on that commit. The user pushes with `git push --follow-tags`.
+- License: MIT (`LICENSE`). Dependabot: not used.
